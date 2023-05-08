@@ -19,7 +19,7 @@ class Ui_Form(object):
         Form.setObjectName('LoginScreen')
         Form.resize(360, 450)
         Form.setStyleSheet(self.Color01)
-        Form.setWindowFlag(Qt.FramelessWindowHint) 
+        # Form.setWindowFlag(Qt.FramelessWindowHint) 
         Form.setAttribute(Qt.WA_TranslucentBackground)
 
         #### FRAMES ####
@@ -90,7 +90,7 @@ class Ui_Form(object):
         self.Login.setShortcut("")
         self.Login.setCheckable(True)
         self.Login.setFlat(True)
-        self.Login.clicked.connect(self.ExitFunc)
+        self.Login.clicked.connect(self.LoginFunc)
 
         #### LAYOUT'S ####
         self.VerticalLayout = QVBoxLayout(Form)
@@ -151,6 +151,9 @@ class Ui_Form(object):
 
     def ExitFunc(self):
         Form.close()
+
+    def LoginFunc(self):
+        print('logado')
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
