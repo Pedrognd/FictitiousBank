@@ -19,7 +19,7 @@ class Ui_Form(object):
         Form.setObjectName('LoginScreen')
         Form.resize(360, 450)
         Form.setStyleSheet(self.Color01)
-        # Form.setWindowFlag(Qt.FramelessWindowHint)
+        Form.setWindowFlag(Qt.FramelessWindowHint)
         Form.setAttribute(Qt.WA_TranslucentBackground)
 
         #### FRAMES ####
@@ -29,14 +29,17 @@ class Ui_Form(object):
 
         self.AccountDataFrame = QFrame(self.MainFrame)
         self.AccountDataFrame.setObjectName('AccountDataFrame')
-        self.AccountDataFrame.setMaximumHeight(200)
-        self.AccountDataFrame.setMinimumHeight(200)
+        self.AccountDataFrame.setMaximumHeight(250)
+        self.AccountDataFrame.setMinimumHeight(250)
         # Back = QPixmap("Icons\Recortada.jpg")
         # self.AccountDataFrame.setStyleSheet(f'background-image: url({Back});')
 
         self.FuncFrame = QFrame(self.MainFrame)
         self.FuncFrame.setObjectName('FuncFrame')
         self.FuncFrame.setStyleSheet(self.Color03)
+        # self.opacity_effect = QGraphicsOpacityEffect()
+        # self.opacity_effect.setOpacity(0.3)
+        # self.FuncFrame.setGraphicsEffect(self.opacity_effect)
 
         #### ACCOUNTDATAFRAME ####
         self.HeaderFrame = QFrame(self.AccountDataFrame)
@@ -53,10 +56,6 @@ class Ui_Form(object):
         self.TitleFrame = QFrame(self.AccountDataFrame)
         self.TitleFrame.setObjectName('TitleFrame')
         self.TitleFrame.setMaximumHeight(50)
-
-        # self.opacity_effect = QGraphicsOpacityEffect()
-        # self.opacity_effect.setOpacity(0.3)
-        # self.TitleFrame.setGraphicsEffect(self.opacity_effect)
 
         self.TitleLabelFrame = QFrame(self.TitleFrame)
         self.TitleLabelFrame.setObjectName('TitleLabelFrame')
@@ -103,7 +102,7 @@ class Ui_Form(object):
         self.BtnExit.setShortcut("")
         self.BtnExit.setCheckable(True)
         self.BtnExit.setFlat(True)
-        # self.BtnExit.clicked.connect(self.ExitFunc)
+        self.BtnExit.clicked.connect(self.ExitFunc)
 
         self.AccountFrame = QFrame(self.AccountDataFrame)
         self.AccountFrame.setObjectName('AccountFrame')
@@ -121,6 +120,7 @@ class Ui_Form(object):
         self.BalanceLabel02 = QLabel(self.BalanceFrame)
         self.BalanceLabel02.setObjectName('BalanceLabel02')
         self.BalanceLabel02.setMaximumWidth(100)
+        self.BalanceLabel02.setMaximumHeight(35)
         self.BalanceLabel02.setStyleSheet(f'font: 15pt \'Agency FB\'; color: #ccc4cf; background-color:#7c96c7; border-radius:10px;')
         self.BalanceLabel02.setText('R$ 1.999,99')
         self.BalanceLabel02.setAlignment(Qt.AlignCenter)
@@ -132,11 +132,42 @@ class Ui_Form(object):
         self.AccountIdLabel = QLabel(self.AccountIdFrame)
         self.AccountIdLabel.setObjectName('AccountIdLabel')
         self.AccountIdLabel.setStyleSheet(f'font: 15pt \'Agency FB\'; color: #ccc4cf;')
-        self.AccountIdLabel.setText('6730806')
+        self.AccountIdLabel.setText('67308067894564')
         self.AccountIdLabel.setAlignment(Qt.AlignCenter)
 
         #### FUNCFRAME ####
         self.BtnFuncFrame = QFrame(self.FuncFrame)
+        self.BtnFuncFrame.setObjectName('BtnFuncFrame')
+
+        self.BtnInvestment = QPushButton(self.BtnFuncFrame)
+        self.BtnInvestment.setObjectName("BtnInvestment")
+        self.BtnInvestment.setMinimumSize(QSize(150, 150))
+        self.BtnInvestment.setMaximumSize(QSize(150, 150))
+        self.BtnInvestment.setCursor(QCursor(Qt.PointingHandCursor))
+        self.BtnInvestment.setText("")
+        self.BtnInvestment.setStyleSheet('border-radius:25px;')
+        icon = QIcon()
+        icon.addPixmap(QPixmap("Icons\Account_App.png"), QIcon.Normal, QIcon.Off)
+        self.BtnInvestment.setIcon(icon)
+        self.BtnInvestment.setIconSize(QSize(150, 150))
+        self.BtnInvestment.setShortcut("")
+        self.BtnInvestment.setCheckable(True)
+        self.BtnInvestment.setFlat(True)
+
+        self.BtnActivities = QPushButton(self.BtnFuncFrame)
+        self.BtnActivities.setObjectName("BtnActivities")
+        self.BtnActivities.setMinimumSize(QSize(150, 150))
+        self.BtnActivities.setMaximumSize(QSize(150, 150))
+        self.BtnActivities.setCursor(QCursor(Qt.PointingHandCursor))
+        self.BtnActivities.setText("")
+        self.BtnActivities.setStyleSheet('border-radius:25px;')
+        icon = QIcon()
+        icon.addPixmap(QPixmap("Icons\Account_App.png"), QIcon.Normal, QIcon.Off)
+        self.BtnActivities.setIcon(icon)
+        self.BtnActivities.setIconSize(QSize(150, 150))
+        self.BtnActivities.setShortcut("")
+        self.BtnActivities.setCheckable(True)
+        self.BtnActivities.setFlat(True)
 
         #### LAYOUT'S ####
         self.VerticalLayout = QVBoxLayout(Form)
@@ -164,6 +195,11 @@ class Ui_Form(object):
         self.VerticalLayout06.setContentsMargins(0,0,0,0)
         self.VerticalLayout06.setSpacing(0)
 
+        self.VerticalLayout07 = QVBoxLayout(self.FuncFrame)
+        self.VerticalLayout07.setObjectName('VerticalLayout07')
+        self.VerticalLayout07.setContentsMargins(0,0,0,0)
+        self.VerticalLayout07.setSpacing(0)
+
         self.HorizontalLayout = QHBoxLayout(self.HeaderFrame)
         self.HorizontalLayout.setObjectName('HorizontalLayout')
         self.HorizontalLayout.setContentsMargins(0,0,0,0)
@@ -189,6 +225,11 @@ class Ui_Form(object):
         self.HorizontalLayout04.setContentsMargins(0,0,0,0)
         self.HorizontalLayout04.setSpacing(0)
 
+        self.GridLayout = QGridLayout(self.BtnFuncFrame)
+        self.GridLayout.setObjectName('GridLayout')
+        self.GridLayout.setContentsMargins(5,5,5,5)
+        self.GridLayout.setSpacing(5)
+
         #### SEPARATOR'S ####
         self.SeparatorHorizontal = QSpacerItem(40,50,QSizePolicy.Expanding, QSizePolicy.Minimum)
         self.SeparatorVertical = QSpacerItem(40,50, QSizePolicy.Minimum, QSizePolicy.Expanding)
@@ -204,6 +245,7 @@ class Ui_Form(object):
         self.VerticalLayout04.addWidget(self.BalanceFrame)
         self.VerticalLayout04.addWidget(self.AccountIdFrame)
         self.VerticalLayout06.addWidget(self.AccountIdLabel)
+        self.VerticalLayout07.addWidget(self.BtnFuncFrame)
         self.HorizontalLayout.addWidget(self.HeaderLabel)
         self.HorizontalLayout01.addWidget(self.TitleLabelFrame)
         self.HorizontalLayout01.addItem(self.SeparatorHorizontal)
@@ -212,6 +254,8 @@ class Ui_Form(object):
         self.HorizontalLayout03.addWidget(self.BtnReturn)
         self.HorizontalLayout03.addWidget(self.BtnExit)
         self.HorizontalLayout04.addWidget(self.BalanceLabel02)
+        self.GridLayout.addWidget(self.BtnInvestment,0,0,1,1)
+        self.GridLayout.addWidget(self.BtnActivities,0,1,1,1)
 
     def retranslateUi(self, Form):
         _translate = QCoreApplication.translate
