@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>Icons/Btt_Login_Hover.png</file>
+    <file>Icons/Btt_Login.png</file>
+    <file>Icons/Btt_Exit_Hover.png</file>
+    <file>Icons/Btt_Exit.png</file>
+    <file>Icons/BackGroundLogin.png</file>
+  </qresource>
+</RCC>
