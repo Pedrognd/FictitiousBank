@@ -183,7 +183,7 @@ class Ui_Form(object):
         self.VerticalLayout03 = QVBoxLayout(self.AccountDataFrame)
         self.VerticalLayout03.setObjectName('VerticalLayout03')
         self.VerticalLayout03.setContentsMargins(0,0,0,0)
-        self.VerticalLayout03.setSpacing(0)
+        self.VerticalLayout03.setSpacing(10)
 
         self.VerticalLayout04 = QVBoxLayout(self.AccountFrame)
         self.VerticalLayout04.setObjectName('VerticalLayout04')
