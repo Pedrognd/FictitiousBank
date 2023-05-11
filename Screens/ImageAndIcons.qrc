@@ -1,9 +1,15 @@
 <RCC>
   <qresource prefix="newPrefix">
-    <file>Icons/Btt_Login_Hover.png</file>
-    <file>Icons/Btt_Login.png</file>
-    <file>Icons/Btt_Exit_Hover.png</file>
-    <file>Icons/Btt_Exit.png</file>
-    <file>Icons/BackGroundLogin.png</file>
+    <file>BackGroundLogin.png</file>
+    <file>Btt_Exit.png</file>
+    <file>Btn_Activities.png</file>
+    <file>Btn_Activities_Hover.png</file>
+    <file>Btn_Investment.png</file>
+    <file>Btn_Investment_Hover.png</file>
+    <file>Btt_Exit_Hover.png</file>
+    <file>Btt_Login.png</file>
+    <file>Btt_Login_Hover.png</file>
+    <file>Btt_Return.png</file>
+    <file>BackGroundMain.png</file>
   </qresource>
 </RCC>
