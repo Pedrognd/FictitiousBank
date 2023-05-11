@@ -449,7 +449,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="ImageAndIcons.qrc"/>
+  <include location="Screens/ImageAndIcons.qrc"/>
  </resources>
  <connections/>
 </ui>
