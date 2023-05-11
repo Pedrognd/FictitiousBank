@@ -13,118 +13,99 @@ import ImageAndIcons
 
 class Ui_LoginScreen(object):
     def setupUi(self, LoginScreen):
+
+        #### Default's ####
         LoginScreen.setObjectName("LoginScreen")
         LoginScreen.resize(360, 450)
         LoginScreen.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         LoginScreen.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        LoginScreen.setStyleSheet("#BackgroundFrame{\n"
+        LoginScreen.setStyleSheet(
+
+"#BackgroundFrame{\n"
 "    background-image: url(:/newPrefix/BackGroundLogin.png);\n"
 "    background-position: center;\n"
 "    border-radius:25px;\n"
 "}\n"
-"\n"
+
 "#MainFrame{\n"
 "    background-color: rgba(26, 84, 191,0.7);\n"
 "    border-radius:25px;\n"
 "}\n"
-"\n"
+
 "#ExitBtn{\n"
 "    image: url(:/newPrefix/Btt_Exit.png);\n"
 "    border-radius:25px;\n"
 "}\n"
-"\n"
 "#ExitBtn:hover{\n"
 "    image: url(:/newPrefix/Btt_Exit_Hover.png);\n"
 "    border-radius:25px;\n"
 "}\n"
-"\n"
+
 "#LabelBody01{\n"
 "    background-color: rgba(229, 229, 229,0.3);\n"
 "    color: rgb(229, 229, 229);\n"
 "    font: 40pt \"Agency FB\";\n"
 "    border-radius:15px;\n"
 "}\n"
-"\n"
+
 "#LoginBtn{\n"
 "    border-radius:25px;\n"
 "    image: url(:/newPrefix/Btt_Login.png);\n"
 "}\n"
-"\n"
+
 "#LoginBtn:hover{\n"
 "    border-radius:25px;\n"
 "    image: url(:/newPrefix/Btt_Login_Hover.png);\n"
-"}")
-        self.verticalLayout = QtWidgets.QVBoxLayout(LoginScreen)
-        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout.setSpacing(0)
-        self.verticalLayout.setObjectName("verticalLayout")
+"}"
+)
+        #### Frames ####
         self.BackgroundFrame = QtWidgets.QFrame(LoginScreen)
+        self.BackgroundFrame.setObjectName("BackgroundFrame")
         self.BackgroundFrame.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.BackgroundFrame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.BackgroundFrame.setLineWidth(0)
-        self.BackgroundFrame.setObjectName("BackgroundFrame")
-        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.BackgroundFrame)
-        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_4.setSpacing(0)
-        self.verticalLayout_4.setObjectName("verticalLayout_4")
+
         self.MainFrame = QtWidgets.QFrame(self.BackgroundFrame)
+        self.MainFrame.setObjectName("MainFrame")
         self.MainFrame.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.MainFrame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.MainFrame.setObjectName("MainFrame")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.MainFrame)
-        self.verticalLayout_2.setContentsMargins(30, 30, 30, 30)
-        self.verticalLayout_2.setSpacing(0)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
+
+        #### Top Frame ####
         self.HeaderFrame = QtWidgets.QFrame(self.MainFrame)
+        self.HeaderFrame.setObjectName("HeaderFrame")
         self.HeaderFrame.setMaximumSize(QtCore.QSize(16777215, 50))
         self.HeaderFrame.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.HeaderFrame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.HeaderFrame.setLineWidth(0)
-        self.HeaderFrame.setObjectName("HeaderFrame")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(self.HeaderFrame)
-        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout.setSpacing(0)
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem)
+
         self.ExitBtn = QtWidgets.QPushButton(self.HeaderFrame)
+        self.ExitBtn.setObjectName("ExitBtn")
         self.ExitBtn.setMinimumSize(QtCore.QSize(50, 50))
         self.ExitBtn.setMaximumSize(QtCore.QSize(50, 50))
         self.ExitBtn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.ExitBtn.setText("")
         self.ExitBtn.setIconSize(QtCore.QSize(50, 50))
         self.ExitBtn.setFlat(True)
-        self.ExitBtn.setObjectName("ExitBtn")
         self.ExitBtn.clicked.connect(self.ExitFunc)
-        self.horizontalLayout.addWidget(self.ExitBtn)
-        self.verticalLayout_2.addWidget(self.HeaderFrame)
+
+        #### Mid Frame ####
         self.BodyFrame = QtWidgets.QFrame(self.MainFrame)
+        self.BodyFrame.setObjectName("BodyFrame")
         self.BodyFrame.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.BodyFrame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.BodyFrame.setObjectName("BodyFrame")
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.BodyFrame)
-        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_3.setSpacing(0)
-        self.verticalLayout_3.setObjectName("verticalLayout_3")
-        spacerItem1 = QtWidgets.QSpacerItem(20, 108, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_3.addItem(spacerItem1)
+
         self.LabelBody01 = QtWidgets.QLabel(self.BodyFrame)
-        self.LabelBody01.setAlignment(QtCore.Qt.AlignCenter)
         self.LabelBody01.setObjectName("LabelBody01")
-        self.verticalLayout_3.addWidget(self.LabelBody01)
-        spacerItem2 = QtWidgets.QSpacerItem(20, 108, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_3.addItem(spacerItem2)
-        self.verticalLayout_2.addWidget(self.BodyFrame)
+        self.LabelBody01.setAlignment(QtCore.Qt.AlignCenter)
+
+        #### Bottom Frame ####
         self.FooterFrame = QtWidgets.QFrame(self.MainFrame)
         self.FooterFrame.setMinimumSize(QtCore.QSize(0, 50))
         self.FooterFrame.setMaximumSize(QtCore.QSize(16777215, 50))
         self.FooterFrame.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.FooterFrame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.FooterFrame.setObjectName("FooterFrame")
-        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.FooterFrame)
-        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_2.setSpacing(0)
-        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+
         self.LoginBtn = QtWidgets.QPushButton(self.FooterFrame)
         self.LoginBtn.setMinimumSize(QtCore.QSize(150, 50))
         self.LoginBtn.setMaximumSize(QtCore.QSize(150, 50))
@@ -133,11 +114,55 @@ class Ui_LoginScreen(object):
         self.LoginBtn.setIconSize(QtCore.QSize(150, 50))
         self.LoginBtn.setFlat(True)
         self.LoginBtn.setObjectName("LoginBtn")
-        self.horizontalLayout_2.addWidget(self.LoginBtn)
-        self.verticalLayout_2.addWidget(self.FooterFrame)
-        self.verticalLayout_4.addWidget(self.MainFrame)
-        self.verticalLayout.addWidget(self.BackgroundFrame)
 
+        #### Separator ####
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 108, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 108, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        
+        
+        self.verticalLayout = QtWidgets.QVBoxLayout(LoginScreen)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setSpacing(0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.MainFrame)
+        self.verticalLayout_2.setContentsMargins(30, 30, 30, 30)
+        self.verticalLayout_2.setSpacing(0)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.BodyFrame)
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_3.setSpacing(0)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.BackgroundFrame)
+        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_4.setSpacing(0)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.HeaderFrame)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setSpacing(0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.FooterFrame)
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_2.setSpacing(0)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+
+        self.verticalLayout.addWidget(self.BackgroundFrame)
+        self.verticalLayout_2.addWidget(self.HeaderFrame)
+        self.verticalLayout_2.addWidget(self.BodyFrame)
+        self.verticalLayout_2.addWidget(self.FooterFrame)
+        self.verticalLayout_3.addItem(spacerItem1)
+        self.verticalLayout_3.addWidget(self.LabelBody01)
+        self.verticalLayout_3.addItem(spacerItem2)
+        self.verticalLayout_4.addWidget(self.MainFrame)
+        self.horizontalLayout.addItem(spacerItem)
+        self.horizontalLayout.addWidget(self.ExitBtn)
+        self.horizontalLayout_2.addWidget(self.LoginBtn)
+        
         self.retranslateUi(LoginScreen)
         QtCore.QMetaObject.connectSlotsByName(LoginScreen)
 
