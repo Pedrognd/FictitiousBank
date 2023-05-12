@@ -394,7 +394,7 @@
                   <item>
                    <widget class="QLabel" name="Label01">
                     <property name="text">
-                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Saldo aplicado: R$ 150,00&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Saldo total: R$ 115,00&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Data da aplicação: 05/01/2023&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Total de redimento: R$ 15,00&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Saldo aplicado: R$ 150,00&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Saldo total: R$ 115,00&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Data da aplicação: 05/01/2023&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Total de redimento: R$ 15,00&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
                     <property name="scaledContents">
                      <bool>false</bool>
