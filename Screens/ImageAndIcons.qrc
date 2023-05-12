@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="newPrefix">
+    <file>BackGroundInvestment.png</file>
+    <file>Btt_Return_Hover.png</file>
     <file>BackGroundLogin.png</file>
     <file>Btt_Exit.png</file>
     <file>Btn_Activities.png</file>
