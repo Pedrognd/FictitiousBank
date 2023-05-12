@@ -30,12 +30,28 @@ def SegundaTela():
     MainScreen.setWindowFlag(QtCore.Qt.FramelessWindowHint)
     MainScreen.setAttribute(QtCore.Qt.WA_TranslucentBackground)
     MainScreen.ExitBtn.clicked.connect(MainScreen.close)
+    MainScreen.InvestmentBtn.clicked.connect(TerceiraTela)
     MainScreen.show()
     LoginScreen.close()
+
+def TerceiraTela():
+    InvestmentScreen.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+    InvestmentScreen.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+    InvestmentScreen.ReturnBtn.clicked.connect(ReturnBtn)
+    InvestmentScreen.Label01.setMargin(15)
+    # InvestmentScreen.InvestmentBtn.clicked.connect(InvestmentScreen)
+    InvestmentScreen.show()
+    MainScreen.hide()
+    
+def ReturnBtn():
+    if InvestmentScreen.close() == True:
+        MainScreen.show()
 
 app = QtWidgets.QApplication([])
 LoginScreen=uic.loadUi('FictitiousBank01.ui')
 MainScreen=uic.loadUi('FictitiousBank02.ui')
+InvestmentScreen=uic.loadUi('FictitiousBank03.ui')
+
 LoginScreen.setWindowFlag(QtCore.Qt.FramelessWindowHint)
 LoginScreen.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 LoginScreen.ExitBtn.clicked.connect(LoginScreen.close)
