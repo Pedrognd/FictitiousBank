@@ -33,6 +33,19 @@ class Func():
     #     if active.close() == True:
     #         request.show()
 
+#### Função para Chamar Tela de LoginScreen (A Primeira Tela) ####
+def PrimeiraTela():
+    # Tirar Barra de Tarefas e Deixa o Form Principal 'Invisivel' 
+    LoginScreen.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+    LoginScreen.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
+    # Funções dos Botões, de Fechar Tela e Abrir a Proxima Tela
+    LoginScreen.ExitBtn.clicked.connect(LoginScreen.close)
+    LoginScreen.LoginBtn.clicked.connect(SegundaTela)
+
+    # Iniciar o Form
+    LoginScreen.show()
+
 #### Função para Chamar Tela de MainScreen (A Segunda Tela) ####
 def SegundaTela():
     # Tirar Barra de Tarefas e Deixa o Form Principal 'Invisivel' 
@@ -47,6 +60,7 @@ def SegundaTela():
     # Funções dos Botões, de Fechar Tela e Abrir a Proxima Tela
     MainScreen.ExitBtn.clicked.connect(MainScreen.close)
     MainScreen.InvestmentBtn.clicked.connect(TerceiraTela)
+    MainScreen.ActivitiesBtn.clicked.connect(QuartaTela)
 
     # Iniciar o Form e Fechar Tela Anterior
     MainScreen.show()
@@ -64,6 +78,19 @@ def TerceiraTela():
     # Iniciar o Form e Fechar Tela Anterior
     InvestmentScreen.show()
     MainScreen.hide()
+
+#### Função para Chamar Tela de ActivitiesScreen (A Quarta Tela) ####
+def QuartaTela():
+    # Tirar Barra de Tarefas e Deixa o Form Principal 'Invisivel' 
+    ActivitiesScreen.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+    ActivitiesScreen.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
+    # Função do Botão, Fechar a Tela 
+    ActivitiesScreen.ReturnBtn.clicked.connect(ReturnBtn)
+
+    # Iniciar o Form e Fechar Tela Anterior
+    ActivitiesScreen.show()
+    MainScreen.hide()
     
 #### Função para Quando fechar a Tela de Investimento, Voltar para a Tela Principal #### 
 def ReturnBtn():
@@ -71,23 +98,15 @@ def ReturnBtn():
     if InvestmentScreen.close() == True:
         MainScreen.show()
 
+    if ActivitiesScreen.close() == True:
+        MainScreen.show()
+
 #### Carregando os Forms que Foram Feitos no QtDesigner ####
 app = QtWidgets.QApplication([])
 LoginScreen=uic.loadUi('FictitiousBank01.ui')
 MainScreen=uic.loadUi('FictitiousBank02.ui')
 InvestmentScreen=uic.loadUi('FictitiousBank03.ui')
-
-def PrimeiraTela():
-    # Tirar Barra de Tarefas e Deixa o Form Principal 'Invisivel' 
-    LoginScreen.setWindowFlag(QtCore.Qt.FramelessWindowHint)
-    LoginScreen.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-
-    # Funções dos Botões, de Fechar Tela e Abrir a Proxima Tela
-    LoginScreen.ExitBtn.clicked.connect(LoginScreen.close)
-    LoginScreen.LoginBtn.clicked.connect(SegundaTela)
-
-    # Iniciar o Form
-    LoginScreen.show()
+ActivitiesScreen=uic.loadUi('FictitiousBank04.ui')
 
 PrimeiraTela()
 app.exec()

@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ActivitiesScreen</class>
+ <widget class="QWidget" name="ActivitiesScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>750</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#BackgroundFrame{
+	background-image: url(:/newPrefix/BackGroundActivities.png);
+	background-position: center;
+	border-radius: 25px;
+}
+
+#MainFrame{
+	background-color: rgba(21,84,191,0.5);
+	border-radius:25px;
+}
+
+#HeaderFrame{
+	background-color: rgba(21,84,191,1);
+	border-radius:25px;
+}
+
+#TitleLabel{
+	color: rgba(229,229,229,1);
+	font: 30pt Agency FB;
+}
+
+#ReturnBtn{
+	image: url(:/newPrefix/Btt_Return.png);
+	border-radius:25px;
+}
+
+#ReturnBtn:hover{
+	image: url(:/newPrefix/Btt_Return_Hover.png);
+	border-radius:25px;
+}
+
+/* Frames e textos das atividades*/
+#Att01{
+	background-color: rgba(244, 127, 22,1);
+	border-radius: 15px;
+}
+
+#Att01_Label{
+	color: rgba(229,229,229,1);
+	font: 12pt bold Agency FB;
+}
+
+#Att02{
+	background-color: rgb(244, 127, 22);
+	border-radius: 15px;
+}
+
+#Att02_Label{
+	color: rgba(229,229,229,1);
+	font: 12pt bold Agency FB;
+}
+
+#Att03{
+	background-color: rgb(244, 127, 22);
+	border-radius: 15px;
+}
+
+#Att03_Label{
+	color: rgba(229,229,229,1);
+	font: 12pt bold Agency FB;
+}
+
+#Att04{
+	background-color: rgb(244, 127, 22);
+	border-radius: 15px;
+}
+
+#Att04_Label{
+	color: rgba(229,229,229,1);
+	font: 12pt bold Agency FB;
+}
+
+#Att05{
+	background-color: rgb(244, 127, 22);
+	border-radius: 15px;
+}
+
+#Att05_Label{
+	color: rgba(229,229,229,1);
+	font: 12pt bold Agency FB;
+}
+
+/*Scroll Bar*/
+QScrollBar:vertical{
+	border:none;
+	background-color: rgba(21,84,191,0.5);
+	width: 14px;
+	border-radius:0px;
+}
+
+/*Scroll Bar Handle*/
+QScrollBar::handle:vertical{
+	border-radius: 7px;
+	min-height:30px;
+	background-color: rgb(244, 127, 22);
+}
+
+QScrollBar::handle:vertical:pressed{
+	background-color: rgb(186, 100, 22);
+}
+
+/*Background ScrollBar*/
+QScrollBar::up-arrow:vertical,QScrollBar::down-arrow:vertical{
+	background:none;
+}
+
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical{
+	background:none;
+}
+
+/*Btn ScrollBar*/
+QScrollBar::sub-line:vertical{
+	border:none;
+	background-color:rgba(0,0,0,0);
+}
+
+QScrollBar::add-line:vertical{
+	border:none;
+	background-color:rgba(0,0,0,0);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QScrollArea" name="BackgroundFrame">
+     <property name="minimumSize">
+      <size>
+       <width>750</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>750</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="MainFrame">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-300</y>
+        <width>736</width>
+        <height>1300</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="HeaderFrame">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="TitleLabel">
+            <property name="text">
+             <string>Central Bank</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="ContFrame">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>1250</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="leftMargin">
+           <number>30</number>
+          </property>
+          <property name="rightMargin">
+           <number>30</number>
+          </property>
+          <property name="bottomMargin">
+           <number>30</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="ToolBar">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>516</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="ReturnBtn">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="Att01">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="Att01_Label">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1) Numa classe de 40 alunos,15% foram reprovados. Quantos alunos foram reprovados?&lt;/p&gt;&lt;p&gt;R:&lt;/p&gt;&lt;p&gt;40 ------100%&lt;/p&gt;&lt;p&gt;x------ 15%&lt;/p&gt;&lt;p&gt;100 . x = 40 . 15&lt;/p&gt;&lt;p&gt;100x = 600&lt;/p&gt;&lt;p&gt;x = 600/100 &lt;/p&gt;&lt;p&gt;x = 6 alunos que foram reprovados.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="Att02">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="Att02_Label">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;2) Uma televisão custa R$ 900,00 no cartão, à vista tem um desconto de 20%. &lt;/p&gt;&lt;p&gt;Comprando à vista, quanto pouparei?&lt;/p&gt;&lt;p&gt;R:&lt;/p&gt;&lt;p&gt;900 ------- 100%&lt;/p&gt;&lt;p&gt;x ----------- 20%&lt;/p&gt;&lt;p&gt;100 . x = 900 . 20&lt;/p&gt;&lt;p&gt;100x = 18 000&lt;/p&gt;&lt;p&gt;x = 18 000/100&lt;/p&gt;&lt;p&gt;x = 180. R$ 180,00 será poupado.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="Att03">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QLabel" name="Att03_Label">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;3) Durante quanto tempo devo aplicar um capital de R$ 40 000, à 20% a.a. &lt;/p&gt;&lt;p&gt;Para obter de juro uma importância igual ao capital aplicado?&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="Att04">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QLabel" name="Att04_Label">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;4) Qual o juro produzido por R$ 600,00 em 2 anos, à taxa de 5% a.m.?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="Att05">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="Att05_Label">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;5) Qual o juro produzido por R$ 5 000 em 15 dias, à taxa de 2% a.m.?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="Screens/ImageAndIcons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -46,23 +46,23 @@
 }
 
 #TextFrame{
-	background-color: rgba(21,84,191,1);
+	background-color: rgba(244, 127, 22,1);
 	border-radius:25px;
 }
 
 #Label00{
 	color: rgba(229,229,229,1);
-	font: 15pt Agency FB;
+	font: 12pt bold Agency FB;
 }
 
 #TextFrame_2{
-	background-color: rgba(21,84,191,1);
+	background-color: rgba(244, 127, 22,1);
 	border-radius:25px;
 }
 
 #Label01{
 	color: rgba(229,229,229,1);
-	font: 12pt Agency FB;
+	font: 12pt bold Agency FB;
 }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
